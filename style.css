@@ -14,6 +14,8 @@ body {
 	color: #737373;
 }
 
+/** Глобальные параметры **/
+
 .container {
 	width: 960px;
 	margin: 0 auto;
@@ -22,9 +24,10 @@ body {
 
 .btn {
 	display: flex;
+	padding: 10px 13px;
 	background-color: #00a1eb;
 	border: solid #00a1eb;
-	border-width: 10px 13px;
+	border-width: 1px 1px;
 	border-radius: 5px;
 	outline: none;
 	cursor: pointer;
@@ -35,12 +38,23 @@ body {
 	color: #fff;
 }
 
-
+.btn:hover {
+	background-color: #fff;
+	border: solid #00a1eb;
+	border-width: 1px 1px;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: 600;
+	font-size: 13px;
+	color: #00a1eb;
+}
 
 .btn-white {
+	padding: 10px 13px;
 	background-color: #fff;
 	border: solid #fff;
-	border-width: 10px 13px;
+	border-width: 1px 1px;
 	border-radius: 4px;
 	outline: none;
 	cursor: pointer;
@@ -48,7 +62,6 @@ body {
 	font-weight: 700;
 	font-size: 11px;
 }
-
 
 .blue-font {
 	font-size: 27px;
@@ -68,8 +81,7 @@ p {
 	font-size: 13px;
 }
 
-
-
+/** блок header **/
 
 .main-container {
   min-width: 960px;
@@ -79,9 +91,9 @@ p {
   
 .main-header {
   min-height: 470px;
+  margin-bottom: 130px;
   background: url("img/bgr_top.jpg") no-repeat;
   background-size: 100%;
-  margin-bottom: 130px;
 }
 
 .main-navigation {
@@ -91,7 +103,6 @@ p {
 	text-transform: uppercase;
   align-items: baseline;
 }
-
 
 .main-navigation__a {
 	margin-top: 33px;
@@ -152,7 +163,6 @@ p {
   color: #fff;
 }
 
-
 /** блок "O nas" **/
 
 .main__about-us {
@@ -199,16 +209,15 @@ p {
   background: url("img/nasz.jpg"), no-repeat;
 }
 
-
 /** блок "Asortyment" **/
 
 .main__asortyment {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("img/bgr_assort.jpg") repeat;
   padding-top: 70px;
   padding-bottom: 70px;
+  background: url("img/bgr_assort.jpg") repeat;
   text-align: center;
 }
 
@@ -240,63 +249,57 @@ p {
   position: relative;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0;
   margin-bottom: 50px;
 	margin-top: 0;
+	padding: 0;
 }
 
 .main__asortyment__items-arrowleft {
 	display: block;
 	position: absolute;
+	width: 35px;
+	height: 35px;
 	top: 45%;
 	left: -4.2%;
   border: 1px solid #00a1eb;
 	border-radius: 50%;
-	width: 35px;
-	height: 35px;
 }
 
 .main__asortyment__items-arrowright {
 	display: block;
 	position: absolute;
+	width: 35px;
+	height: 35px;
 	top: 45%;
 	right: -4.2%;
   border: 1px solid #00a1eb;
 	border-radius: 50%;
-	width: 35px;
-	height: 35px;
 }
 
 .main__asortyment__items-arrowleft:before {
 	content: '';
   position: absolute;
-	top: 50%;
-	left: 40%;
-  border: 1px solid #00a1eb;
-	border-right: none;
-	border-top: none;
 	width: 10px;
 	height: 10px;
-	transform: translateY(-50%) rotate(45deg);   
+	top: 50%;
+	left: 40%;
+	transform: translateY(-50%) rotate(45deg); 
+  border: 1px solid #00a1eb;
+	border-right: none;
+	border-top: none;  
 }
 
 .main__asortyment__items-arrowright:after {
 	content: '';
   position: absolute;
+	width: 10px;
+	height: 10px;
 	top: 50%;
 	right: 40%;
+	transform: translateY(-50%) rotate(45deg);
   border: 1px solid #00a1eb;
 	border-left: none;
 	border-bottom: none;
-	width: 10px;
-	height: 10px;
-	transform: translateY(-50%) rotate(45deg);   
-}
-
-
-
-.main__asortyment__items:after {
-	
 }
 
 .main__asortyment__items li {
@@ -307,15 +310,15 @@ p {
   width: 270px;
   height: 270px;
   list-style: none;
-	color: #fff;
 	font-size: 19px;
+	color: #fff;
 }
 
 .main__asortyment__items li span {
 	padding-bottom: 7px;
-	color: #fff;
 	font-size: 20px;
 	font-weight: 700;
+	color: #fff;
 }
 
 .main__asortyment__items li a {
@@ -347,9 +350,7 @@ p {
 .main__asortyment .btn {
 	width: 130px;
 	margin-left: 44%;
-	
 }
-
 
 /** блок "Features" **/
 
@@ -365,6 +366,7 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
   width: 30%;
   margin-bottom: 50px;
 }
@@ -372,37 +374,56 @@ p {
 .main__features__item-icon1 {
 	width: 180px;
 	height: 180px;
-	background: url("img/icon-pan.png") no-repeat center;
 	margin-bottom: 30px;
-	margin-left: 90px;
+	background: url("img/icon-pan.png") no-repeat center;
 }
 
 .main__features__item-icon2 {
 	width: 170px;
 	height: 170px;
+	margin-bottom: 30px;
 	background: url("img/icon-fish.png") no-repeat;
 	background-position: 45px 40px;
-	margin-bottom: 30px;
-	margin-left: 85px;
 }
 
 .main__features__item-icon3 {
 	width: 170px;
 	height: 170px;
+	margin-bottom: 30px;
 	background: url("img/icon-shrimp.png") no-repeat;
 	background-position: 40px 50px;
-	margin-bottom: 30px;
-	margin-left: 85px;
 }
 
 .bgr {
 	background-color: #00a1eb;
-	border: 2px solid #00a1eb;
+	border: 3px solid #00a1eb;
+	border-radius: 50%
+}
+
+.bgr:hover {
+	background-color: #fff;
+	border: 3px solid #00a1eb;
 	border-radius: 50%
 }
 
 .main__features__item-icon1:hover {
 	background: url("img/icon-pan_h.png") no-repeat center;
+}
+
+.main__features__item-icon2:hover {
+	width: 170px;
+	height: 170px;
+	margin-bottom: 30px;
+	background: url("img/icon-fish_h.png") no-repeat center;
+	background-position: 45px 40px;
+}
+
+.main__features__item-icon3:hover {
+	width: 170px;
+	height: 170px;
+	margin-bottom: 30px;
+	background: url("img/icon-shrimp_h.png") no-repeat center;
+	background-position: 40px 50px;
 }
 
 .main__features__item h2 {
@@ -424,8 +445,8 @@ p {
 }
 
 .main__features__item p {
-	text-align: center;
 	margin-bottom: 0;
+	text-align: center;
 	font-size: 12px;
 }
 
@@ -433,10 +454,6 @@ p {
   width: 130px;
   margin-left: 44%;
 }
-
-
-
-
 
 /** блок "Map" **/
 
@@ -448,15 +465,14 @@ p {
 	min-width: 100%;
   height: 535px;
 	margin: 0;
-  padding-left: 0;
   margin-bottom: 50px;
+  padding-left: 0;
   padding-right: 0;
 }
 
 .main__map__left {
   width: 47.5%;
 }
-
 
 .main__map__right {
   width: 43%;
@@ -476,8 +492,8 @@ p {
 
 .main__map__right h2 {
 	position: relative;
-	font-size: 27px;
 	margin-bottom: 40px;
+	font-size: 27px;
 }
 
 .main__map__right h2:after {
@@ -503,15 +519,28 @@ p {
 	line-height: 19px;
 }
 
+.main__map__right-contact .btn-white:hover {
+	padding: 10px 13px;
+	background-color: #2eb2ef;
+	border: solid #fff;
+	border-width: 1px 1px;
+	border-radius: 4px;
+	outline: none;
+	font-weight: 700;
+	font-size: 11px;
+	cursor: pointer;
+	color: #fff;
+}
+
 /** блок "main__footer" **/
 
 .main__footer {
   display: flex;
   justify-content: space-between;
 	margin-bottom: 40px;
-	color: #737373;
 	font-size: 12px;
 	text-decoration: none;
+	color: #737373;
 }
 
 .main__footer__list li {
@@ -545,17 +574,16 @@ p {
 	line-height: 19px;
 }
 
-
-/** блок "Footer" **/
+/** блок footer **/
 
 .main-footer {
 	display: flex;
 	justify-content: space-between;
 	height: 100px;
 	background-color: #2b2b2b;
-	color: #c6c6c6;
 	font-size: 11px;
 	font-weight: 500;
+	color: #c6c6c6;
 }
 
 .main-footer span {
